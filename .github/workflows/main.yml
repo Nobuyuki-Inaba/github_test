@@ -34,6 +34,14 @@ jobs:
       - run: echo '### Hello world! :rocket:' >> $GITHUB_STEP_SUMMARY
       - run: echo '### Love this feature! :medal_sports:' >> $GITHUB_STEP_SUMMARY
       - run: echo '<h1>Great feature!</h1>' >> $GITHUB_STEP_SUMMARY
+      - run: |
+          echo "## Test results" >> "$GITHUB_STEP_SUMMARY"
+          echo "| **Test Name** | **Result**|" >> "$GITHUB_STEP_SUMMARY"
+          echo "|--|--|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| validate numbers are > 0 |:white_check_mark: |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| validate numbers are < 10 |:white_check_mark: |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| validate numbers are odd |:x: |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| validate numbers are even|:white_check_mark: |" >> "$GITHUB_STEP_SUMMARY"
       - name: composite
         id: composite-step
         uses: ./
