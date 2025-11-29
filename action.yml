@@ -2,7 +2,7 @@ name: 'Sample Action'
 description: 'sample'
 inputs:
   var1:
-    reqyured: true
+    required: true
     default: 'world'
 outputs:
   out1:
