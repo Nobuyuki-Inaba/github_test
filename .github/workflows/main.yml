@@ -30,4 +30,7 @@ jobs:
       - name: Set the value
         run: |
           echo "action_state=yellow" >> "$GITHUB_ENV"
-          echo "${{ env.action_state }}" # This will output 'yellow'
+      - run: echo "${{ env.action_state }}" # This will output 'yellow'
+      - run: echo '### Hello world! :rocket:' >> $GITHUB_STEP_SUMMARY
+      - run: echo '### Love this feature! :medal_sports:' >> $GITHUB_STEP_SUMMARY
+      - run: echo '<h1>Great feature!</h1>' >> $GITHUB_STEP_SUMMAsRY
