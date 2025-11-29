@@ -1,0 +1,15 @@
+name: 'Sample Action'
+description: 'sample'
+inputs:
+  var1:
+    reqyured: true
+    default: 'world'
+outputs:
+  out1:
+    value: ${{steps.test-step.outputs.test}}
+runs:
+  using: "composite"
+  steps:
+    - id: test-step
+      run: echo "test=aaa" >> $GITHUB_OUTPUT
+      shell: bash
