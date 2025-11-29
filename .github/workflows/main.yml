@@ -17,6 +17,8 @@ jobs:
 
       - name: List files in this repository
         run: |
+          echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+          echo "::error file=app.js,line=1,col=5,endColumn=7::Error in app.js"
           echo "The repository ${{ github.repository }} contains the following
           files:"
           tree
